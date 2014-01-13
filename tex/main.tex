@@ -1,0 +1,55 @@
+\documentclass{book}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\usepackage{hyperref}
+\usepackage{xspace}
+\usepackage{widetable,tabularx,booktabs,multirow,multicol}
+
+\newfontfamily{\telcontar}[Renderer=Graphite]{Tengwar Telcontar}
+\newfontfamily{\telcontarcaps}[Renderer=Graphite,RawFeature={203=1}]{Tengwar
+Telcontar}
+\newfontfamily{\formal}{Tengwar Formal CSUR}
+\newfontfamily{\freemono}{FreeMonoTengwar}
+\newcommand{\quetta}[1]{{\formal #1}}
+\newcommand{\q}[1]{\quetta{#1}}
+\newcommand{\qh}[1]{{\huge \q{#1}}}
+\newcommand{\ql}[1]{{\Large \q{#1}}}
+\newcommand{\qc}[1]{{\telcontarcaps #1}}
+\renewcommand{\t}[1]{\textit{#1}}
+\newcommand{\elvishtitle}[1]{{\Large\bfseries #1}}
+\newenvironment{elvish}{\formal}{}
+
+\newcommand{\quenya}{\q{}\xspace}
+
+\title{\q{   }}
+\author{Thorsten Renk}
+\date{Version 2.0 (September 23, 2008)}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\chapter{Preface}
+\input{preface}
+
+\mainmatter
+\part{Basic Knowledge}
+\chapter{Verbs in Present Tense, Plural Formation}
+
+\input{lessons/one}
+
+\appendix
+\chapter{\q{}}
+\input{appendixes/tengwar}
+
+\chapter{Numbers}
+\input{appendixes/numbers}
+
+\backmatter
+
+\end{document}
+

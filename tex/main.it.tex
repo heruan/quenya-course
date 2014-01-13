@@ -1,0 +1,51 @@
+\documentclass{book}
+\usepackage{fontspec}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{polyglossia}
+\PolyglossiaSetup{italian}{indentfirst=false}
+\setmainlanguage{italian}
+\usepackage{hyperref}
+\usepackage{xspace}
+\usepackage{widetable,tabularx,booktabs,multirow,multicol}
+
+%\setmainfont{Tengwar Telcontar}
+
+\newfontfamily{\telcontar}[Renderer=Graphite]{Tengwar Telcontar}
+\newfontfamily{\formal}{Tengwar Formal CSUR}
+\newfontfamily{\freemono}{FreeMonoTengwar}
+\newcommand{\quetta}[1]{{\formal #1}}
+\newcommand{\q}[1]{\quetta{#1}}
+\newcommand{\qh}[1]{{\huge \q{#1}}}
+\newcommand{\ql}[1]{{\Large \q{#1}}}
+\renewcommand{\t}[1]{\textit{#1}}
+\newcommand{\elvishtitle}[1]{{\Large\bfseries #1}}
+\newenvironment{elvish}{\formal}{}
+
+\newcommand{\quenya}{\q{}\xspace}
+
+\title{\q{   }}
+\author{Thorsten Renk \and Giovanni Lovato \\ \q{}}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+\part{Nozioni basilari}
+\chapter{Verbi in tempo presente, formazione del plurale}
+
+\input{lessons/one}
+
+\appendix
+\chapter{\q{}}
+\input{appendixes/tengwar}
+
+\chapter{Numeri}
+\input{appendixes/numbers}
+
+\backmatter
+
+\end{document}
+
