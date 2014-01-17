@@ -1,30 +1,11 @@
 \documentclass{book}
-\usepackage{fontspec}
-\defaultfontfeatures{Mapping=tex-text}
-\usepackage{polyglossia}
+\input{preamble}
 \PolyglossiaSetup{italian}{indentfirst=false}
 \setmainlanguage{italian}
-\usepackage{hyperref}
-\usepackage{xspace}
-\usepackage{widetable,tabularx,booktabs,multirow,multicol}
-
-%\setmainfont{Tengwar Telcontar}
-
-\newfontfamily{\telcontar}[Renderer=Graphite]{Tengwar Telcontar}
-\newfontfamily{\formal}{Tengwar Formal CSUR}
-\newfontfamily{\freemono}{FreeMonoTengwar}
-\newcommand{\quetta}[1]{{\formal #1}}
-\newcommand{\q}[1]{\quetta{#1}}
-\newcommand{\qh}[1]{{\huge \q{#1}}}
-\newcommand{\ql}[1]{{\Large \q{#1}}}
-\renewcommand{\t}[1]{\textit{#1}}
-\newcommand{\elvishtitle}[1]{{\Large\bfseries #1}}
-\newenvironment{elvish}{\formal}{}
-
-\newcommand{\quenya}{\q{}\xspace}
 
 \title{\q{   }}
 \author{Thorsten Renk \and Giovanni Lovato \\ \q{}}
+\date{Versione 3.0 (\today)}
 
 \begin{document}
 
@@ -32,18 +13,21 @@
 \maketitle
 \tableofcontents
 
-\mainmatter
-\part{Nozioni basilari}
-\chapter{Verbi in tempo presente, formazione del plurale}
+\chapter{Prefazione}
+\input{preface.it.tex}
 
-\input{lessons/one}
+\mainmatter
+\part{Conoscenze di base}
+\chapter{Verbi al presente, formazione del plurale}
+
+\input{lessons/one.it.tex}
 
 \appendix
 \chapter{\q{}}
-\input{appendixes/tengwar}
+\input{appendixes/tengwar.it.tex}
 
-\chapter{Numeri}
-\input{appendixes/numbers}
+\chapter{Numerali}
+\input{appendixes/numbers.it.tex}
 
 \backmatter
 
